@@ -1,0 +1,29 @@
+
+.cart{ 
+width: 20px;
+padding-top: 5px;
+}
+
+.cart-container{
+    cursor: pointer;
+    background-color: white;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 12px;
+    position: relative;
+    margin-right: 10px;
+}
+
+.cant{
+    background-color: red;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    margin-left: 22px;
+    margin-top: 1px;
+    font-size: 8px;
+    border-radius: 10px;
+    text-align: center;
+
+
+}
