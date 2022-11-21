@@ -14,22 +14,23 @@
 
 
 .home{
-cursor: pointer;
-background-color: rgb(42, 140, 153);
-border-radius: 5px;
-font-weight: bold;
-font-size: 20px;
-padding: 3px;
-padding-top: 5px;
-text-align: center;
-margin-left: 10px;
+  cursor: pointer;
+  background-color: rgb(42, 140, 153);
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 3px;
+  padding-top: 5px;
+  text-align: center;
+  margin-left: 10px;
 }
 
 .categorias {
+margin-top: 5px;
+display: inline-flex;
 position: relative;
 flex-grow: 1;
 cursor: pointer;
-background-color: rgb(42, 140, 153);
 padding: 6px;
 border-radius: 5px;
 text-align: center;
@@ -70,10 +71,10 @@ font-size: 13px;
 .contacto{
   cursor: pointer;
   background-color:rgb(42, 140, 153);
-border-radius: 5px;
-text-align: center;
-font-size: 13px;
-padding: 6px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 13px;
+  padding: 6px;
 }
 
 
@@ -113,14 +114,16 @@ padding: 6px;
 
 .sub-item{
   cursor: pointer;
-  background-color:rgb(42, 140, 153);
-border-radius: 5px;
-text-align: center;
-font-size: 13px;
-padding: 6px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 13px;
+  padding: 6px;
 }
 
-
+.categorias-icon{
+  margin-top: 3px;
+  margin-left: 3px;
+}
 
   @media screen {
   @media (max-width: 500px){

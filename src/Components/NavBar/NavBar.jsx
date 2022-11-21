@@ -2,6 +2,7 @@ import React from "react";
 import "./NavBar.css";
 import { BsBook } from "react-icons/bs";
 import { AiOutlineHome } from "react-icons/ai";
+import { TbTriangleInverted } from "react-icons/tb";
 
 const NavBar = ({ children }) => {
   return (
@@ -31,6 +32,9 @@ const NavBar = ({ children }) => {
           <li className="sub-item">Promociones</li>
           <li class="categorias">
             Categorias
+            <div className="categorias-icon">
+              <TbTriangleInverted />
+            </div>
             <ul class="items">
               <li>Cientificos</li>
               <li>Novelas</li>
