@@ -1,4 +1,5 @@
 .menu {
+  width: 100%;
   display: grid;
   grid-template-columns: 60px 300px 1fr 100px 110px 110px 100px 45px;
   grid-template-rows: 40px;
@@ -83,6 +84,7 @@ font-size: 13px;
   padding: 6px;
   width: 200px;
   align-items: center;
+  text-align: center;
 }
 
 
@@ -121,8 +123,8 @@ font-size: 13px;
 }
 
 .categorias-icon{
-  margin-top: 3px;
-  margin-left: 3px;
+  margin-top: 2px;
+  margin-left: 6px;
 }
 
   @media screen {

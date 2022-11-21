@@ -1,9 +1,13 @@
 import React from "react";
 import "./ItemListContainer.css";
+import { BiHappyBeaming } from "react-icons/bi";
 const ItemListContainer = (prop) => {
   return (
     <div className="greeting">
-      <h2> Gracias por visitarnos {prop.greeting}</h2>
+      Gracias por visitarnos {prop.greeting}
+      <div className="greeting-icon">
+        <BiHappyBeaming />
+      </div>
     </div>
   );
 };
