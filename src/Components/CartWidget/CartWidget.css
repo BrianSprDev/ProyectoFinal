@@ -5,24 +5,26 @@ padding-top: 5px;
 }
 
 .cart-container{
+    padding: 1px;
     cursor: pointer;
-    background-color: white;
-    border-radius: 3px;
+    background-color: rgb(255,255,255);
+    border-radius: 5px;
     color: #fff;
-    font-size: 12px;
+    font-size: 13px;
     position: relative;
     align-items: center;
-    margin-right: 10px;
+    margin-right: 9px;
+    height: 25px;
 }
 
 .cant{
     background-color: red;
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
     position: absolute;
     margin-left: 22px;
     margin-top: 1px;
-    font-size: 8px;
+    font-size: 9px;
     border-radius: 10px;
     text-align: center;
 

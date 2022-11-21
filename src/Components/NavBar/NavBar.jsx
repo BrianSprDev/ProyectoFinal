@@ -35,6 +35,7 @@ const NavBar = ({ children }) => {
               <li>Cientificos</li>
               <li>Novelas</li>
               <li>Cuentos</li>
+              <li>Poesía</li>
             </ul>
           </li>
           <li className="contacto">Contacto</li>
