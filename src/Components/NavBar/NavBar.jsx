@@ -18,13 +18,17 @@ const NavBar = ({ children }) => {
             </div>
           </li>
           <li>
-            <input
-              type="search"
-              name=""
-              id="search"
-              placeholder="¿Que estás buscando?"
-            />
+            <div className="input-container">
+              <input
+                type="search"
+                name=""
+                id="search"
+                placeholder="¿Que estás buscando?"
+              />
+            </div>
           </li>
+          <li className="sub-item">Novedades</li>
+          <li className="sub-item">Promociones</li>
           <li class="categorias">
             Categorias
             <ul class="items">
@@ -33,7 +37,7 @@ const NavBar = ({ children }) => {
               <li>Cuentos</li>
             </ul>
           </li>
-          <li className="about">Sobre Nosotros</li>
+          <li className="contacto">Contacto</li>
           {children}
         </ul>
       </nav>
