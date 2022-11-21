@@ -1,48 +1,49 @@
 import React from "react";
 import "./NavBar.css";
 import { BsBook } from "react-icons/bs";
-import { AiOutlineHome } from "react-icons/ai";
 import { TbTriangleInverted } from "react-icons/tb";
 
 const NavBar = ({ children }) => {
   return (
     <div>
       <nav>
-        <ul class="menu">
-          <li className="home">
-            <AiOutlineHome />
-          </li>
-          <li className="brand-container">
-            <div className="brand">SPR LIBROS</div>
-            <div className="brand-icon">
+        <ul class="nav">
+          <li className="nav__title">
+            <div className="nav__brand-icon">
               <BsBook />
             </div>
+            <div className="nav__brand-name">SPR LIBROS</div>
           </li>
-          <li>
+          <li className="search">
             <div className="input-container">
               <input
                 type="search"
                 name=""
                 id="search"
+                className="search__input"
                 placeholder="¿Que estás buscando?"
               />
             </div>
           </li>
-          <li className="sub-item">Novedades</li>
-          <li className="sub-item">Promociones</li>
-          <li class="categorias">
-            Categorias
-            <div className="categorias-icon">
-              <TbTriangleInverted />
-            </div>
-            <ul class="items">
-              <li>Cientificos</li>
-              <li>Novelas</li>
-              <li>Cuentos</li>
-              <li>Poesía</li>
+          <li className="buttons">
+            <ul className="buttons__list">
+              <li className="buttons__news">Novedades</li>
+              <li className="buttons__promotions">Promociones</li>
+              <li class="buttons_categories">
+                Categorias
+                <div className="buttons_categories-icon">
+                  <TbTriangleInverted />
+                </div>
+                <ul class="items">
+                  <li>Cientificos</li>
+                  <li>Novelas</li>
+                  <li>Cuentos</li>
+                  <li>Poesía</li>
+                </ul>
+              </li>
+              <li className="buttons_contact">Contacto</li>
             </ul>
           </li>
-          <li className="contacto">Contacto</li>
           {children}
         </ul>
       </nav>

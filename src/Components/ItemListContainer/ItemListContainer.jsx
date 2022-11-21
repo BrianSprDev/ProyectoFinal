@@ -5,7 +5,7 @@ const ItemListContainer = (prop) => {
   return (
     <div className="greeting">
       Gracias por visitarnos {prop.greeting}
-      <div className="greeting-icon">
+      <div className="greeting__icon">
         <BiHappyBeaming />
       </div>
     </div>
