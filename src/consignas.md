@@ -1,8 +1,16 @@
-- Crea una carpeta dentro de src llamada components que contenga la implementación del componente NavBar
-  dentro del archivo NavBar.js. Su funcionalidad es la de renderizar una barra de menú (Navbar).
+Descripción de la actividad.
 
-- Crea un componente CartWidget con un ícono y una notificación mostrando un número hardcodeado (fijo).
-  Este servirá luego para indicar la cantidad de elementos que tenemos en el carrito, pero por ahora,
-  mostrará un número hardcodeado (colocado en el código). Ubica este componente (CartWidget) dentro de Navbar..
+Crea un componente ItemCount.js, que debe estar compuesto de un botón y controles, para incrementar y decrementar la cantidad requerida de ítems OK
 
-- Crea un componente contenedor ItemListContainer.js con una prop greeting, y muestra el mensaje dentro del contenedor con el styling integrado.
+El número contador nunca puede superar el stock disponible.
+De no haber stock el click no debe tener efecto y por ende no ejecutar el callback onAdd.
+Si hay stock al clickear el botón se debe ejecutar onAdd con un número que debe ser la cantidad seleccionada por el usuario. OK
+
+Como sabes, todavía no tenemos nuestro detalle de ítem y este desarrollo es parte de él, así que por el momento puedes probar e importar este componente dentro del ItemListContainer, solo a
+propósitos de prueba. Después lo sacaremos de aquí y lo incluiremos en el detalle del ítem. OK
+
+Crea los componentes Item.js e ItemList.js para mostrar algunos productos en tu ItemListContainer.js. Los ítems deben provenir de un llamado a una promise que los resuelva en tiempo diferido (setTimeout) de 2 segundos, para emular retrasos de red
+
+Item.js: Es un componente destinado a mostrar información breve del producto que el user clickeará luego para acceder a los detalles (los desarrollaremos más adelante)
+ItemList.js Es un agrupador de un set de componentes Item.js (Deberías incluirlo dentro de ItemListContainer de la primera pre-entrega del Proyecto Final)
+Implementa un async mock (promise): Usa un efecto de montaje para poder emitir un llamado asincrónico a un mock (objeto) estático de datos que devuelva un conjunto de item { id, title, description, price, pictureUrl } en dos segundos (setTimeout), para emular retrasos de red.

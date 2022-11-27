@@ -1,0 +1,24 @@
+.item-count{
+    display: flex;
+}
+
+.button{
+    all:unset;
+    width: 25px;
+    background-color: #f2f2f2f2;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    margin: 0px 5px 0px 5px;
+}
+
+.button:hover{
+    background-color: #646464;
+
+
+}
+
+.amount{
+    width: 40px;
+    text-align: center;
+}
