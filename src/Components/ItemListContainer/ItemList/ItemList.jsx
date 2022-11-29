@@ -17,8 +17,7 @@ const estEnEscarlata = new libro(
   "1",
   "estudio en escarlata",
   "escrito por Arthur Conan Doyle",
-  "$" + 1000,
-  "wwwww"
+  "$" + 1000
 );
 
 const mil984 = new libro(
