@@ -7,7 +7,7 @@ const NavBar = ({ children }) => {
   return (
     <div>
       <nav>
-        <ul class="nav">
+        <ul className="nav">
           <li className="nav__title">
             <div className="nav__brand-icon">
               <BsBook />
@@ -29,12 +29,12 @@ const NavBar = ({ children }) => {
             <ul className="buttons__list">
               <li className="buttons__news">Novedades</li>
               <li className="buttons__promotions">Promociones</li>
-              <li class="buttons_categories">
+              <li className="buttons_categories">
                 Categorias
                 <div className="buttons_categories-icon">
                   <TbTriangleInverted />
                 </div>
-                <ul class="items">
+                <ul className="items">
                   <li>Cientificos</li>
                   <li>Novelas</li>
                   <li>Cuentos</li>
