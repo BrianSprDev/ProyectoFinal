@@ -15,9 +15,6 @@ const ItemListContainer = (prop) => {
         </div>
       </div>
       <div>
-        <ItemCount />
-      </div>
-      <div>
         <Item />
       </div>
       <div>

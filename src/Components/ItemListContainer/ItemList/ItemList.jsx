@@ -2,14 +2,19 @@ import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 import "./ItemList.css";
+import img1984 from "./imagenes/1984.jpg";
+import imgEstEsc from "./imagenes/estudioEnEscarlata.jpg";
+import imgOdisea from "./imagenes/Odisea.jpg";
+import ItemCount from "../ItemCount/ItemCount";
 
 class libro {
-  constructor(id, title, description, price, pictureUrl) {
+  constructor(id, title, description, price, pictureUrl, stock) {
     this.id = id;
     this.title = title;
     this.description = description;
     this.price = price;
     this.pictureUrl = pictureUrl;
+    this.stock = stock;
   }
 }
 
@@ -17,7 +22,9 @@ const estEnEscarlata = new libro(
   "1",
   "estudio en escarlata",
   "escrito por Arthur Conan Doyle",
-  "$" + 1000
+  "$" + 1000,
+  img1984,
+  10
 );
 
 const mil984 = new libro(
@@ -25,7 +32,8 @@ const mil984 = new libro(
   "1984",
   "escrito por George Orwell",
   "$" + 1200,
-  "wwwww"
+  imgEstEsc,
+  7
 );
 
 const laOdisea = new libro(
@@ -33,7 +41,8 @@ const laOdisea = new libro(
   "La Odisea",
   "escrito por Homero",
   "$" + 950,
-  "wwwww"
+  imgOdisea,
+  5
 );
 
 const arrLibros = [estEnEscarlata, mil984, laOdisea];
@@ -59,10 +68,18 @@ const ProductsList = () => {
   };
 
   return (
-    <div className="div">
-      {prod.map((p) => (
-        <li key={p.id}>{p.title + " " + p.description + " " + p.price}</li>
-      ))}
+    <div className="div-card">
+      <div className="p-card">
+        {prod.map((p) => (
+          <li className="li-card" key={p.id}>
+            {p.title + " " + p.description + " " + p.price}
+            <img src={p.pictureUrl} />
+            <div className="d-count">
+              <ItemCount stock={p.stock} />
+            </div>
+          </li>
+        ))}
+      </div>
     </div>
   );
 };

@@ -1,7 +1,6 @@
 import React from "react";
 import "./CartWidget.css";
 import { MdShoppingCart } from "react-icons/md";
-import ItemCount from "../ItemListContainer/ItemCount/ItemCount";
 
 const CartWidget = () => {
   return (
