@@ -7,9 +7,7 @@ import "./Item.css";
 const Item = () => {
   return (
     <div className="item-description">
-      <button className=" item-button-description">
-        Estudio en escarlata - Libro de Arthur Conan Doyle
-      </button>
+      <button className=" item-button-description">Mas información</button>
     </div>
   );
 };

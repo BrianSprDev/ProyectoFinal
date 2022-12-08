@@ -6,6 +6,8 @@ import img1984 from "./imagenes/1984.jpg";
 import imgEstEsc from "./imagenes/estudioEnEscarlata.jpg";
 import imgOdisea from "./imagenes/Odisea.jpg";
 import ItemCount from "../ItemCount/ItemCount";
+import imgAleph from "./imagenes/elAleph.jpg";
+import Item from "../itemJs/Item.jsx";
 
 class libro {
   constructor(id, title, description, price, pictureUrl, stock) {
@@ -45,7 +47,15 @@ const laOdisea = new libro(
   5
 );
 
-const arrLibros = [estEnEscarlata, mil984, laOdisea];
+const elAleph = new libro(
+  "4",
+  "El Aleph",
+  "escrito por Borges",
+  "$" + 120,
+  imgAleph,
+  3
+);
+const arrLibros = [estEnEscarlata, mil984, laOdisea, elAleph];
 
 /* ItemList.js Es un agrupador de un set de componentes Item.js (Deberías incluirlo dentro de ItemListContainer de la primera pre-entrega del Proyecto Final)
 Implementa un async mock (promise): Usa un efecto de montaje para poder emitir un llamado asincrónico a un mock (objeto) estático de datos que devuelva un conjunto de item { id, title, description, price, pictureUrl } en dos segundos (setTimeout), para emular retrasos de red. */
@@ -75,7 +85,7 @@ const ProductsList = () => {
             {p.title + " " + p.description + " " + p.price}
             <img src={p.pictureUrl} />
             <div className="d-count">
-              <ItemCount stock={p.stock} />
+              <ItemCount stock={p.stock} /> <Item />
             </div>
           </li>
         ))}

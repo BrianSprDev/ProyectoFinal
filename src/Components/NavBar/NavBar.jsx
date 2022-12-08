@@ -2,6 +2,7 @@ import React from "react";
 import "./NavBar.css";
 import { BsBook } from "react-icons/bs";
 import { TbTriangleInverted } from "react-icons/tb";
+import { Link } from "react-router-dom";
 
 const NavBar = ({ children }) => {
   return (
@@ -9,10 +10,13 @@ const NavBar = ({ children }) => {
       <nav>
         <ul className="nav">
           <li className="nav__title">
-            <div className="nav__brand-icon">
-              <BsBook />
-            </div>
-            <div className="nav__brand-name">SPR LIBROS</div>
+            {" "}
+            <Link to="/">
+              <div className="nav__brand-icon">
+                <BsBook />
+              </div>
+              <div className="nav__brand-name">SPR LIBROS</div>
+            </Link>
           </li>
           <li className="search">
             <div className="input-container">
@@ -35,10 +39,15 @@ const NavBar = ({ children }) => {
                   <TbTriangleInverted />
                 </div>
                 <ul className="items">
-                  <li>Cientificos</li>
-                  <li>Novelas</li>
-                  <li>Cuentos</li>
-                  <li>Poesía</li>
+                  <li>
+                    <Link to="/novelas">Novelas </Link>
+                  </li>
+                  <li>
+                    <Link to="/cuentos"> Cuentos</Link>
+                  </li>
+                  <li>
+                    <Link to="/poesia">Poesía</Link>
+                  </li>
                 </ul>
               </li>
               <li className="buttons_contact">Contacto</li>

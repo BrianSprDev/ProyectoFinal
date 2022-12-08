@@ -66,6 +66,7 @@ nav *{
   display: inline-flex;
   position: relative;
   padding: 10px;
+  z-index: 9999;
 }
   
 .buttons_categories:hover 
