@@ -3,6 +3,7 @@ import "./App.css";
 import CartWidget from "./Components/CartWidget/CartWidget";
 import ItemListContainer from "./Components/ItemListContainer/ItemListContainer";
 import NavBar from "./Components/NavBar/NavBar";
+import ItemDetailContainer from "./Components/ItemDetailContainer/ItemDetailContainer.jsx";
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
       <Routes>
         <Route path="/" element={<ItemListContainer />}></Route>
         <Route path="/category/:id" element={<ItemListContainer />}></Route>
-        <Route path="/item/:id" element={<ItemListContainer />}></Route>
+        <Route path="/item/:id" element={<ItemDetailContainer />}></Route>
       </Routes>
     </BrowserRouter>
   );

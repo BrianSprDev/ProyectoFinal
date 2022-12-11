@@ -1,0 +1,81 @@
+.div-card{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 95vh;
+background-color: rgb(200, 200,200);
+}
+
+
+
+ul.li-card{
+grid-column-start: 1; 
+grid-column-end: 2; 
+grid-row-start: 1;
+grid-row-end: 2;
+;
+display: flex;
+}
+
+.li_title{
+    list-style: none;
+font-size: 30px;
+width: 600px;
+height: 100px;
+margin-top: 25px;
+text-align: center;
+}
+
+.li_price{
+display: flex;
+margin-left: 30%;
+color:#fafafa;
+font-size: 30px;
+}
+
+.li_description{
+width: 250px;
+height: 250px;
+position: absolute;
+margin: 100px 250px 0px 300px;
+list-style: none;
+text-align: justify;
+
+
+}
+
+.b-card{
+    background-color:#2a8c99;
+    width: 230px;
+    border-radius: 10px;
+    text-align: center;
+    position: absolute;
+    margin: 330px 300px;
+
+}
+.but-card{
+all:unset;
+background-color: #fafafa;
+align-items: center;
+text-align: center;
+width: 150px;
+height: 30px;
+border-radius: 10px;
+cursor: pointer;
+margin: 3px;
+}
+.but-card:hover{
+        background-color: rgb(38, 151, 16);
+        color: #fafafa;
+    
+    
+}
+
+
+.img_product{
+object-fit: contain;
+width: 300px;
+height: 350px;
+position: absolute;
+margin-top: 100px;
+}

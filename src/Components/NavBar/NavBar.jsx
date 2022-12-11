@@ -9,15 +9,14 @@ const NavBar = ({ children }) => {
     <div>
       <nav>
         <ul className="nav">
-          <li className="nav__title">
-            {" "}
-            <Link to="/">
+          <Link to="/" className="lnk">
+            <li className="nav__title">
               <div className="nav__brand-icon">
                 <BsBook />
               </div>
               <div className="nav__brand-name">SPR LIBROS</div>
-            </Link>
-          </li>
+            </li>
+          </Link>
           <li className="search">
             <div className="input-container">
               <input
@@ -40,13 +39,20 @@ const NavBar = ({ children }) => {
                 </div>
                 <ul className="items">
                   <li>
-                    <Link to="/novelas">Novelas </Link>
+                    <Link to="/category/novelas" className="lnk">
+                      Novelas{" "}
+                    </Link>
                   </li>
                   <li>
-                    <Link to="/cuentos"> Cuentos</Link>
+                    <Link to="/category/cuentos" className="lnk">
+                      {" "}
+                      Cuentos
+                    </Link>
                   </li>
                   <li>
-                    <Link to="/poesia">Poesía</Link>
+                    <Link to="/category/poesia" className="lnk">
+                      Poesía
+                    </Link>
                   </li>
                 </ul>
               </li>

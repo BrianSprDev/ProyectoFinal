@@ -16,3 +16,38 @@
     margin-top: 3px;
 }
 
+   
+.p_card{
+    display: flex;
+}
+
+img{
+    position: absolute;
+    margin-top: 30px;
+    width: 80%;
+    height: 80%;
+    object-fit:contain;
+    align-items: center;
+}
+
+.li_card{
+    display: flex;
+    list-style: none;
+    width: 600px;
+    height: 200px;
+    position: relative;
+    justify-content: center;}
+
+.b_card{
+    position: absolute;
+    margin:10vw;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #2a8c99;
+    padding: 3px;
+}
+
+.link{
+    color:#ffffff;
+    font-size: 16px;
+}
