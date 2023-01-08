@@ -3,6 +3,8 @@ import img1984 from "./imagenes/1984.jpg";
 import imgEstEsc from "./imagenes/estudioEnEscarlata.jpg";
 import imgOdisea from "./imagenes/Odisea.jpg";
 import imgAleph from "./imagenes/elAleph.jpg";
+import { useEffect } from "react";
+import { getFirestore, doc } from "firebase/firestore";
 
 export const data = [
   {

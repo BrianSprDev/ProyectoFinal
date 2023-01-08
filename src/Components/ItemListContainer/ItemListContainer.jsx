@@ -40,9 +40,7 @@ const ItemListContainer = (prop) => {
         </div>
       </div>
 
-      {prod == undefined ? (
-        ""
-      ) : (
+      {prod && (
         <div className="div_card">
           <div className="p_card">
             {prod.map((p) => (

@@ -1,41 +1,39 @@
-/* import React from "react";
-import { useState } from "react";
 import { useEffect } from "react";
-import "./ItemList.css";
-import { data } from "../../data/data.jsx";
-import { Link } from "react-router-dom";
-const ProductsList = () => {
-  const [prod, setProd] = useState([]);
+import {
+  getFirestore,
+  doc,
+  getDoc,
+  collection,
+  getDocs,
+} from "firebase/firestore";
 
+import React from "react";
+import { useState } from "react";
+
+const ItemList = () => {
+  const [item, setItem] = useState({});
+  const [ItemCol, setItemCol] = useState([]);
   useEffect(() => {
-    getBooks().then((response) => {
-      setProd(response);
-    });
+    getItemData();
+    getItems();
   }, []);
 
-  const getBooks = () => {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve(data);
-      }, 500);
+  const getItemData = () => {
+    const db = getFirestore();
+    const docRef = doc(db, "items", "Hv3r9WFJQuQGBn6V22BV");
+    getDoc(docRef).then((snapshot) => {
+      setItem({ id: snapshot.id, ...snapshot.data() });
     });
+    console.log(item);
   };
 
-  return (
-    <div className="div_card">
-      <div className="p_card">
-        {prod.map((p) => (
-          <li className="li_card" key={p.id}>
-            {p.title + " " + p.description + " " + p.price}
-            <img src={p.pictureUrl} />
-            <Link to={`/item/${p.id}`}> button</Link>
-            <div className="b_card"></div>
-          </li>
-        ))}
-      </div>
-    </div>
-  );
-};
+  const getItems = async () => {
+    const db = getFirestore();
+    const collectionRef = collection(db, "items");
+    const snapshot = await getDocs(collectionRef);
+    console.log(snapshot.docs.map((d) => ({ id: d.id, ...d.data() })));
+  };
 
-export default ProductsList;
- */
+  return <div>ItemList</div>;
+};
+export default ItemList;
