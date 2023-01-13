@@ -38,22 +38,15 @@ const NavBar = ({ children }) => {
                   <TbTriangleInverted />
                 </div>
                 <ul className="items">
-                  <li>
-                    <Link to="/category/novelas" className="lnk">
-                      Novelas{" "}
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/category/cuentos" className="lnk">
-                      {" "}
-                      Cuentos
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/category/poesia" className="lnk">
-                      Poesía
-                    </Link>
-                  </li>
+                  <Link to="/category/novelas" className="lnk">
+                    <li>Novelas </li>
+                  </Link>
+                  <Link to="/category/cuentos" className="lnk">
+                    <li> Cuentos</li>
+                  </Link>
+                  <Link to="/category/poesia" className="lnk">
+                    <li>Poesía</li>
+                  </Link>
                 </ul>
               </li>
               <li className="buttons_contact">Contacto</li>

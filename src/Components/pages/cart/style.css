@@ -1,0 +1,35 @@
+.button_cart {
+  cursor: pointer;
+  background-color: var(--color-accent);
+  border-radius: var(--radius);
+  text-align: center;
+  padding: 6px;
+  color: white;
+  width: auto;
+  margin-left: 30px;
+}
+
+.ul_quantity {
+  list-style: none;
+  display: flex;
+}
+.quantity {
+  font-size: 20px;
+  margin-left: 10px;
+}
+.tittle {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.button_fin {
+  cursor: pointer;
+  background-color: var(--color-accent);
+  border-radius: var(--radius);
+  padding: 6px;
+  color: white;
+  width: auto;
+  text-align: center;
+  justify-content: center;
+  margin-left: 15px;
+}

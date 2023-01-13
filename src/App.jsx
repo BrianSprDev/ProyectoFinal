@@ -1,13 +1,22 @@
+/* React */
+import React, { useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import "./App.css";
-import CartWidget from "./Components/CartWidget/CartWidget";
-import ItemListContainer from "./Components/ItemListContainer/ItemListContainer";
-import NavBar from "./Components/NavBar/NavBar";
-import ItemDetailContainer from "./Components/ItemDetailContainer/ItemDetailContainer.jsx";
-import Cart from "./Components/Cart/Cart";
-import React from "react";
+
+/* Pages */
+import Home from "./Components/pages/home";
+import Category from "./Components/pages/category";
+import Item from "./Components/pages/item";
+import Cart from "./Components/pages/cart";
+
+/* Context */
 import { CartContext } from "./context/CartContext";
-import ItemList from "./Components/ItemListContainer/ItemList/ItemList";
+
+/* Styles */
+import "./App.css";
+
+/* Nav */
+import CartWidget from "./Components/NavBar/CartWidget/CartWidget";
+import NavBar from "./Components/NavBar/NavBar";
 
 function App() {
   return (
@@ -19,11 +28,10 @@ function App() {
           </NavBar>
         </div>
         <Routes>
-          <Route path="/" element={<ItemListContainer />}></Route>
-          <Route path="/category/:id" element={<ItemListContainer />}></Route>
-          <Route path="/item/:id" element={<ItemDetailContainer />}></Route>
-          <Route path="/cart" element={<Cart />}></Route>
-          <Route path="/itemlist" element={<ItemList />}></Route>
+          <Route path="/" element={<Home />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/item/:id" element={<Item />} />
+          <Route path="/category/:category" element={<Category />} />
         </Routes>
       </BrowserRouter>
     </CartContext>

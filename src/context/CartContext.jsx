@@ -23,9 +23,14 @@ export const CartContext = ({ children }) => {
       const oldCart = cart.filter(
         (currentProduct) => currentProduct.id !== product.id
       );
+
+      let quantity = product.quantity + oldProduct.quantity;
+
+      if (quantity > product.stock) quantity = product.stock;
+
       const newProduct = {
         ...product,
-        quantity: product.quantity + oldProduct.quantity,
+        quantity,
       };
       setcart([...oldCart, newProduct]);
     }
@@ -37,8 +42,6 @@ export const CartContext = ({ children }) => {
     );
     setcart(newCart);
   };
-
-  console.log(cart);
 
   return (
     <Contexto.Provider value={{ cart, addNewProduct, deleteProduct }}>
