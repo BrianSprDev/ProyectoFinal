@@ -20,7 +20,7 @@ const Cart = () => {
                   deleteProduct(product);
                 }}
               >
-                deleteProduct
+                Eliminar Producto
               </button>
             </li>
           </ul>
